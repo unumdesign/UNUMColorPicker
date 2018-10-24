@@ -1,0 +1,6 @@
+framework module UNUMColorPicker {
+  umbrella header "UNUMColorPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
