@@ -34,6 +34,7 @@ public class UNUMColorPickerView: UIView {
         super.init(coder: aDecoder)
     }
 
+    //need to find a way to init view with colors and init color
     public func setup(colors: [UIColor], initColor: UIColor?) {
         self.colors = colors
         // set init color, if nil use the first color from array
@@ -60,12 +61,12 @@ public class UNUMColorPickerView: UIView {
     }
 }
 
+//MARK: UICollectionViewDataSource
 extension UNUMColorPickerView: UICollectionViewDataSource {
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ColorEditorCollectionViewCell
         let color = colors[indexPath.row]
         cell.setupColorButton(colorValue: color, selected: selectedColor == color)
-
         return cell
     }
     
@@ -74,6 +75,7 @@ extension UNUMColorPickerView: UICollectionViewDataSource {
     }
 }
 
+//MARK: UICollectionViewDelegate
 extension UNUMColorPickerView: UICollectionViewDelegate {
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         colorPickerDelegaet?.didSet(color: colors[indexPath.row])

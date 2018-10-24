@@ -16,24 +16,33 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        //color data
         let colorData: [UIColor] = [.white, .black, .blue, .green, .yellow, .red, .cyan, .brown]
+
+        //init view
         let bundle = Bundle(for: UNUMColorPickerView.self)
         let nib = UINib(nibName: "UNUMColorPickerView", bundle: bundle)
         let colorPickerView = nib.instantiate(withOwner: self, options: nil).first as! UNUMColorPickerView
-//        let view = UNUMColorPickerView(colors: colorData, initColor: nil, frame: containerView.frame)
+
         containerView.addSubview(colorPickerView)
-        containerView.backgroundColor = .green
+
+        //add constraints
         colorPickerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             colorPickerView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 0),
             colorPickerView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0),
             colorPickerView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0),
             colorPickerView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0)])
+
+        
         colorPickerView.setup(colors: colorData, initColor: nil)
+
         colorPickerView.colorPickerDelegaet = self
     }
 }
 
+//MARK: UNUMColorPickerDelegate
 extension ViewController: UNUMColorPickerDelegate {
     func save() {
 
