@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'UNUMColorPicker_Example' do
+  pod 'UNUMColorPicker', :path => '../'
+
+  target 'UNUMColorPicker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
