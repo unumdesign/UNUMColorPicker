@@ -20,8 +20,7 @@ class ViewController: UIViewController {
         let colorData: [UIColor] = [.white, .black, .blue, .green, .yellow, .red, .cyan, .brown]
 
         //init view
-        let vc = UNUMColorPickerViewController()
-        vc.setup(colors: colorData, initColor: nil)
+        let vc = UNUMColorPickerViewController(colors: colorData, initColor: nil)
         vc.colorPickerDelegaet = self
 
         containerView.addSubview(vc.view)

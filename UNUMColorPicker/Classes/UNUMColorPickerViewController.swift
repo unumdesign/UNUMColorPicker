@@ -35,22 +35,18 @@ public class UNUMColorPickerViewController: UIViewController {
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    public convenience init() {
+    public convenience init(colors: [UIColor], initColor: UIColor?) {
         let bundle = Bundle(for: UNUMColorPickerViewController.self)
         self.init(nibName: "UNUMColorPickerViewController", bundle: bundle)
+        self.colors = colors
+        self.initColor = initColor ?? colors.first ?? .clear
+
+        selectedColor = self.initColor
+        setupCollectionView()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    }
-
-    //need to find a way to init view with colors and init color
-    public func setup(colors: [UIColor], initColor: UIColor?) {
-        self.colors = colors
-        // set init color, if nil use the first color from array
-        self.initColor = initColor == nil ? colors.first : initColor
-        selectedColor = self.initColor
-        setupCollectionView()
     }
 
     private func setupCollectionView() {
