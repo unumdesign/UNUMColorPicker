@@ -20,19 +20,19 @@ class ViewController: UIViewController {
         let colorData: [UIColor] = [.white, .black, .blue, .green, .yellow, .red, .cyan, .brown]
 
         //init view
-        let vc = UNUMColorPickerViewController(colors: colorData, initColor: nil)
-        vc.colorPickerDelegaet = self
+        let colorPickerViewController = UNUMColorPickerViewController(colors: colorData, initColor: nil)
+        colorPickerViewController.colorPickerDelegaet = self
 
-        containerView.addSubview(vc.view)
-        addChild(vc)
+        containerView.addSubview(colorPickerViewController.view)
+        addChild(colorPickerViewController)
 
         //add constraints
-        vc.view.translatesAutoresizingMaskIntoConstraints = false
+        colorPickerViewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            vc.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 0),
-            vc.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0),
-            vc.view.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0),
-            vc.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0)]
+            colorPickerViewController.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 0),
+            colorPickerViewController.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0),
+            colorPickerViewController.view.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0),
+            colorPickerViewController.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0)]
         )
     }
 }
