@@ -22,11 +22,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/zhaoli1211/UNUMColorPicker'
+  s.homepage         = 'https://github.com/unumdesign/UNUMColorPicker'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhaoli1211' => 'zhaoli841211@gmail.com' }
-  s.source           = { :git => 'https://github.com/zhaoli1211/UNUMColorPicker.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/unumdesign/UNUMColorPicker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.3'
