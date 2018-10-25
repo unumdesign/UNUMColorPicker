@@ -19,12 +19,15 @@ class ViewController: UIViewController {
         //color data
         let colorData: [UIColor] = [.white, .black, .blue, .green, .yellow, .red, .cyan, .brown]
 
-        //init view
+        //init viewController
         let colorPickerViewController = UNUMColorPickerViewController(colors: colorData, initColor: nil)
-        colorPickerViewController.colorPickerDelegaet = self
+        colorPickerViewController.delegate = self
 
+        // Add to view.
+        willMove(toParent: colorPickerViewController)
         containerView.addSubview(colorPickerViewController.view)
         addChild(colorPickerViewController)
+        didMove(toParent: colorPickerViewController)
 
         //add constraints
         colorPickerViewController.view.translatesAutoresizingMaskIntoConstraints = false
@@ -40,11 +43,11 @@ class ViewController: UIViewController {
 //MARK: UNUMColorPickerDelegate
 extension ViewController: UNUMColorPickerDelegate {
     func save() {
-
+        print("save delegate function called.")
     }
 
     func cancel() {
-        
+        print("cancel delegate function called.")
     }
 
     func didSet(color: UIColor) {

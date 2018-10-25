@@ -32,7 +32,7 @@ public class UNUMColorPickerViewController: UIViewController {
     private let cellIdentifier = "ColorEditorCollectionViewCell"
 
     //delegate: communicate with outside
-    public var colorPickerDelegaet: UNUMColorPickerDelegate?
+    public var delegate: UNUMColorPickerDelegate?
 
     fileprivate var initColor: UIColor!
     fileprivate var selectedColor: UIColor!
@@ -63,11 +63,11 @@ public class UNUMColorPickerViewController: UIViewController {
     }
 
     @IBAction func saveAction(_ sender: Any) {
-        colorPickerDelegaet?.save()
+        delegate?.save()
     }
 
     @IBAction func cancelAction(_ sender: Any) {
-        colorPickerDelegaet?.cancel()
+        delegate?.cancel()
     }
 }
 
@@ -88,7 +88,7 @@ extension UNUMColorPickerViewController: UICollectionViewDataSource {
 //MARK: UICollectionViewDelegate
 extension UNUMColorPickerViewController: UICollectionViewDelegate {
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        colorPickerDelegaet?.didSet(color: colors[indexPath.row])
+        delegate?.didSet(color: colors[indexPath.row])
         selectedColor = colors[indexPath.row]
         collectionView.reloadData()
     }
