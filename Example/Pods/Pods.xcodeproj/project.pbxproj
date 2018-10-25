@@ -24,6 +24,9 @@
 		E648D1459E40CEFF6B314EB4519538BA /* Pods-UNUMColorPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D621446BAD0467EBA4FA4F3FEF2273A /* Pods-UNUMColorPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1C68AED218124A8004E6591 /* UNUMColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C68AEB218124A8004E6591 /* UNUMColorPickerView.xib */; };
 		F1C68AEF2181362F004E6591 /* UNUMColorPickerView.xib in Sources */ = {isa = PBXBuildFile; fileRef = F1C68AEB218124A8004E6591 /* UNUMColorPickerView.xib */; };
+		F96FD6732182307600A0672A /* UNUMColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96FD6712182307500A0672A /* UNUMColorPickerViewController.swift */; };
+		F96FD6742182307600A0672A /* UNUMColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */; };
+		F96FD675218233FE00A0672A /* UNUMColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */; };
 		FCD41149923B669C933CF459E99ECD4D /* ColorEditorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17368B2BE58644E58AE772BC982B7A57 /* ColorEditorCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +97,8 @@
 		F1C68AEB218124A8004E6591 /* UNUMColorPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UNUMColorPickerView.xib; path = UNUMColorPicker/Classes/UNUMColorPickerView.xib; sourceTree = "<group>"; };
 		F33A1D9C61649522EFF017EC4638B8A6 /* Pods-UNUMColorPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UNUMColorPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
 		F34FCFA53F49C97A1D4C900798643366 /* Pods-UNUMColorPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UNUMColorPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F96FD6712182307500A0672A /* UNUMColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UNUMColorPickerViewController.swift; path = UNUMColorPicker/Classes/UNUMColorPickerViewController.swift; sourceTree = "<group>"; };
+		F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UNUMColorPickerViewController.xib; path = UNUMColorPicker/Classes/UNUMColorPickerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +251,8 @@
 				D2608C795FC0CA2E3F2E59321A18F5A6 /* ReplaceMe.swift */,
 				A41E267729BFB56071EBF31A899A4AED /* UNUMColorPickerView.swift */,
 				F1C68AEB218124A8004E6591 /* UNUMColorPickerView.xib */,
+				F96FD6712182307500A0672A /* UNUMColorPickerViewController.swift */,
+				F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */,
 				652F40AE3ADD302AAA2984325FDC45FA /* Pod */,
 				D3647A567AE2AFDAD52B870B3B99F1BA /* Resources */,
 				9C4201FFBDA860D11F5F6A6A7C709B78 /* Support Files */,
@@ -409,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24FF49ED547F2A8FDFB5B043C52E9F7 /* ColorEditorCollectionViewCell.xib in Resources */,
+				F96FD675218233FE00A0672A /* UNUMColorPickerViewController.xib in Resources */,
 				F1C68AED218124A8004E6591 /* UNUMColorPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A66923CCF84A2B89ABEFF519A0A865 /* UNUMColorPicker.bundle in Resources */,
+				F96FD6742182307600A0672A /* UNUMColorPickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +463,7 @@
 				F1C68AEF2181362F004E6591 /* UNUMColorPickerView.xib in Sources */,
 				FCD41149923B669C933CF459E99ECD4D /* ColorEditorCollectionViewCell.swift in Sources */,
 				3E3F16BE091363435398A97CF6726696 /* ColorEditorCollectionViewCell.xib in Sources */,
+				F96FD6732182307600A0672A /* UNUMColorPickerViewController.swift in Sources */,
 				3E68B19718FB36906D1E28706CDCE2E7 /* ReplaceMe.swift in Sources */,
 				05F3CF82D76C9197FCC4B0097351607F /* UNUMColorPicker-dummy.m in Sources */,
 				3917504C208436486F874D672D6DE60D /* UNUMColorPickerView.swift in Sources */,
