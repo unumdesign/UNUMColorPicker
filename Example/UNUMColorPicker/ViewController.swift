@@ -15,15 +15,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
         //color data
         let colorData: [UIColor] = [.white, .black, .blue, .green, .yellow, .red, .cyan, .brown]
 
         //init view
         let vc = UNUMColorPickerViewController()
-//        let nib = UINib(nibName: "UNUMColorPickerView", bundle: bundle)
-//        let colorPickerView = nib.instantiate(withOwner: self, options: nil).first as! UNUMColorPickerView
+        vc.setup(colors: colorData, initColor: nil)
+        vc.colorPickerDelegaet = self
 
         containerView.addSubview(vc.view)
         addChild(vc)
@@ -34,12 +33,8 @@ class ViewController: UIViewController {
             vc.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 0),
             vc.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0),
             vc.view.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0),
-            vc.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0)])
-
-        
-        vc.setup(colors: colorData, initColor: nil)
-
-        vc.colorPickerDelegaet = self
+            vc.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0)]
+        )
     }
 }
 
