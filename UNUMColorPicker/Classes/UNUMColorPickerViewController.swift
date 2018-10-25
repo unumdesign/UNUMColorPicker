@@ -21,6 +21,11 @@ public class UNUMColorPickerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupCollectionView()
+    }
+
     @IBOutlet var colorCollectionView: UICollectionView!
     //collection view data dource
     private var colors: [UIColor]!
@@ -42,7 +47,6 @@ public class UNUMColorPickerViewController: UIViewController {
         self.initColor = initColor ?? colors.first ?? .clear
 
         selectedColor = self.initColor
-        setupCollectionView()
     }
 
     required init?(coder aDecoder: NSCoder) {
