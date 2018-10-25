@@ -1,10 +1,10 @@
 {
   "name": "UNUMColorPicker",
-  "version": "1.0.0",
-  "summary": "A short description of UNUMColorPicker.",
+  "version": "1.0.1",
+  "summary": "UNUM color picker library.",
   "swift_version": "4.2",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/zhaoli1211/UNUMColorPicker",
+  "homepage": "https://github.com/unumdesign/UNUMColorPicker",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -13,17 +13,11 @@
     "zhaoli1211": "zhaoli841211@gmail.com"
   },
   "source": {
-    "git": "https://github.com/zhaoli1211/UNUMColorPicker.git",
-    "tag": "1.0.0"
+    "git": "https://github.com/unumdesign/UNUMColorPickerSpecs.git"
   },
   "platforms": {
     "ios": "9.3"
   },
   "source_files": "UNUMColorPicker/Classes/**/*",
-  "resource_bundles": {
-    "UNUMColorPicker": [
-      "UNUMColorPicker/Classes/**/*.{xib}"
-    ]
-  },
   "frameworks": "UIKit"
 }
