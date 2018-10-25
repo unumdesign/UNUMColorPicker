@@ -43,11 +43,11 @@ class ViewController: UIViewController {
 //MARK: UNUMColorPickerDelegate
 extension ViewController: UNUMColorPickerDelegate {
     func save() {
-        print("save delegate function called.")
+        print("save delegate function called. This typically would be where you would want to dismiss the colorPicker.")
     }
 
     func cancel() {
-        print("cancel delegate function called.")
+        print("cancel delegate function called. This typically would be where you would want to both dismiss the colorPicker as well as reset the the color of whatever you set in `didSet` to its original color.")
     }
 
     func didSet(color: UIColor) {
