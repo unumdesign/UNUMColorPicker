@@ -7,6 +7,12 @@
 
 import UIKit
 
+public protocol UNUMColorPickerDelegate: class {
+    func didSet(color: UIColor)
+    func save()
+    func cancel()
+}
+
 public class UNUMColorPickerViewController: UIViewController {
 
     public override func viewDidLoad() {
@@ -48,7 +54,7 @@ public class UNUMColorPickerViewController: UIViewController {
     }
 
     private func setupCollectionView() {
-        let bundle = Bundle(for: UNUMColorPickerView.self)
+        let bundle = Bundle(for: UNUMColorPickerViewController.self)
         let nib = UINib(nibName: cellIdentifier, bundle: bundle)
         colorCollectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
 

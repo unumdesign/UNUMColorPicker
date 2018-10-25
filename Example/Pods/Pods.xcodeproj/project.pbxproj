@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		05F3CF82D76C9197FCC4B0097351607F /* UNUMColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 770D1CC34DEFDC8C8ED6078E269ADD8A /* UNUMColorPicker-dummy.m */; };
-		3917504C208436486F874D672D6DE60D /* UNUMColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41E267729BFB56071EBF31A899A4AED /* UNUMColorPickerView.swift */; };
 		3E3F16BE091363435398A97CF6726696 /* ColorEditorCollectionViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = CC16C7E978730D6F725AA5D251E66F85 /* ColorEditorCollectionViewCell.xib */; };
 		3E68B19718FB36906D1E28706CDCE2E7 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2608C795FC0CA2E3F2E59321A18F5A6 /* ReplaceMe.swift */; };
 		4C6D41B9FC7380D1728199905ECBDF2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
@@ -22,8 +21,6 @@
 		C8B429142B6A56C0506966F9B138A52A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
 		CAC35149BC9B14842EA568A8740093B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		E648D1459E40CEFF6B314EB4519538BA /* Pods-UNUMColorPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D621446BAD0467EBA4FA4F3FEF2273A /* Pods-UNUMColorPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1C68AED218124A8004E6591 /* UNUMColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C68AEB218124A8004E6591 /* UNUMColorPickerView.xib */; };
-		F1C68AEF2181362F004E6591 /* UNUMColorPickerView.xib in Sources */ = {isa = PBXBuildFile; fileRef = F1C68AEB218124A8004E6591 /* UNUMColorPickerView.xib */; };
 		F96FD6732182307600A0672A /* UNUMColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96FD6712182307500A0672A /* UNUMColorPickerViewController.swift */; };
 		F96FD6742182307600A0672A /* UNUMColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */; };
 		F96FD675218233FE00A0672A /* UNUMColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */; };
@@ -78,7 +75,6 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C35BA63B56651DC074000CE923A8FF3 /* Pods-UNUMColorPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UNUMColorPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A22E3DF6ABD2B79B5013BFCF804D7B95 /* UNUMColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UNUMColorPicker.modulemap; sourceTree = "<group>"; };
-		A41E267729BFB56071EBF31A899A4AED /* UNUMColorPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UNUMColorPickerView.swift; path = UNUMColorPicker/Classes/UNUMColorPickerView.swift; sourceTree = "<group>"; };
 		A678582EE7470FF06B24FC455B2C6F79 /* Pods-UNUMColorPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UNUMColorPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A90E33169FB502A3D7128EB2C5846E75 /* Pods-UNUMColorPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UNUMColorPicker_Tests.modulemap"; sourceTree = "<group>"; };
 		ACC7509ECCC8AB6ABACE1F6491671057 /* UNUMColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UNUMColorPicker.xcconfig; sourceTree = "<group>"; };
@@ -94,7 +90,6 @@
 		D631E3DC37EF6A9ECE044B0EA9441B7D /* ResourceBundle-UNUMColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-UNUMColorPicker-Info.plist"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E6FE2550C71AAD24F18DD35AC4DC71E5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		F1C68AEB218124A8004E6591 /* UNUMColorPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UNUMColorPickerView.xib; path = UNUMColorPicker/Classes/UNUMColorPickerView.xib; sourceTree = "<group>"; };
 		F33A1D9C61649522EFF017EC4638B8A6 /* Pods-UNUMColorPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UNUMColorPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
 		F34FCFA53F49C97A1D4C900798643366 /* Pods-UNUMColorPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UNUMColorPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F96FD6712182307500A0672A /* UNUMColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UNUMColorPickerViewController.swift; path = UNUMColorPicker/Classes/UNUMColorPickerViewController.swift; sourceTree = "<group>"; };
@@ -249,8 +244,6 @@
 				17368B2BE58644E58AE772BC982B7A57 /* ColorEditorCollectionViewCell.swift */,
 				CC16C7E978730D6F725AA5D251E66F85 /* ColorEditorCollectionViewCell.xib */,
 				D2608C795FC0CA2E3F2E59321A18F5A6 /* ReplaceMe.swift */,
-				A41E267729BFB56071EBF31A899A4AED /* UNUMColorPickerView.swift */,
-				F1C68AEB218124A8004E6591 /* UNUMColorPickerView.xib */,
 				F96FD6712182307500A0672A /* UNUMColorPickerViewController.swift */,
 				F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */,
 				652F40AE3ADD302AAA2984325FDC45FA /* Pod */,
@@ -417,7 +410,6 @@
 			files = (
 				B24FF49ED547F2A8FDFB5B043C52E9F7 /* ColorEditorCollectionViewCell.xib in Resources */,
 				F96FD675218233FE00A0672A /* UNUMColorPickerViewController.xib in Resources */,
-				F1C68AED218124A8004E6591 /* UNUMColorPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,13 +452,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C68AEF2181362F004E6591 /* UNUMColorPickerView.xib in Sources */,
 				FCD41149923B669C933CF459E99ECD4D /* ColorEditorCollectionViewCell.swift in Sources */,
 				3E3F16BE091363435398A97CF6726696 /* ColorEditorCollectionViewCell.xib in Sources */,
 				F96FD6732182307600A0672A /* UNUMColorPickerViewController.swift in Sources */,
 				3E68B19718FB36906D1E28706CDCE2E7 /* ReplaceMe.swift in Sources */,
 				05F3CF82D76C9197FCC4B0097351607F /* UNUMColorPicker-dummy.m in Sources */,
-				3917504C208436486F874D672D6DE60D /* UNUMColorPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
