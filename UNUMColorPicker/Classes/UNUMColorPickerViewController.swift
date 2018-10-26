@@ -15,30 +15,19 @@ public protocol UNUMColorPickerDelegate: class {
 
 public class UNUMColorPickerViewController: UIViewController {
 
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    public override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        setupCollectionView()
-    }
-
     @IBOutlet var colorCollectionView: UICollectionView!
+
+    public var delegate: UNUMColorPickerDelegate?
+
     //collection view data dource
     private var colors: [UIColor]!
     private let cellIdentifier = "ColorEditorCollectionViewCell"
-
-    //delegate: communicate with outside
-    public var delegate: UNUMColorPickerDelegate?
-
-    fileprivate var selectedColor: UIColor!
+    private var selectedColor: UIColor!
 
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
+
     public convenience init(colors: [UIColor], initiallySelectedColor: UIColor? = nil) {
         let bundle = Bundle(for: UNUMColorPickerViewController.self)
         self.init(nibName: "UNUMColorPickerViewController", bundle: bundle)
@@ -48,6 +37,11 @@ public class UNUMColorPickerViewController: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupCollectionView()
     }
 
     private func setupCollectionView() {
