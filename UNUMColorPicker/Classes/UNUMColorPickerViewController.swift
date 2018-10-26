@@ -33,6 +33,9 @@ public class UNUMColorPickerViewController: UIViewController {
     // It could also be argued that the viewController shouldn't be making its own viewModel. Again, this is a simple example and so I opted not to over-complicate this since the complication isn't really needed in this case.
     // If we wanted a more robust architecture (which would make more sense in the full app rather than this small library), then we could have a builder that takes the `UNUMColorPickerProperties` and creates a viewModel with them. The viewModel would then be the parameter for the viewController, and the builder would return the viewController.
     // Also as this is a library, I think it best to keep things simple and agnostic. To use a builder here would force the user to get the viewController by instantiating a builder. But perhaps they don't use builders in their architecture, and so the library would be muddening their architecture. Therefore, especially because this is a library, this simple initializer should suffice.
+    /// - Parameters:
+    ///   - colors: The colors the user will be able to select.
+    ///   - initiallySelectedColor: optional parameter letting a particular color be chosen. Default is to use the first color of colorData or clear if there are no colors in the array.
     public convenience init(colors: [UIColor], initiallySelectedColor: UIColor? = nil) {
         let bundle = Bundle(for: UNUMColorPickerViewController.self)
         self.init(nibName: "UNUMColorPickerViewController", bundle: bundle)
