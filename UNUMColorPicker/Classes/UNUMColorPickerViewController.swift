@@ -86,6 +86,8 @@ extension UNUMColorPickerViewController: UICollectionViewDataSource {
 //MARK: UICollectionViewDelegate
 extension UNUMColorPickerViewController: UICollectionViewDelegate {
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        // Doing both of these things here could be argued to be architecturally inappropriate. But this is so simple that I decided the complexity that would be added by doing this "correctly" is not worth muddying the waters since this example is so simple. We can cross that bridge when we get there. This is good enough for how simple this library is.
         delegate?.didSet(color: viewModel.colors[indexPath.row])
         viewModel.selectedColor = viewModel.colors[indexPath.row]
         collectionView.reloadData()
