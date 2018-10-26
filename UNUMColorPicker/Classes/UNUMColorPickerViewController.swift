@@ -1,8 +1,8 @@
 //
-//  UNUMColorPickerView.swift
+//  UNUMColorPickerViewController.swift
 //  UNUMColorPicker
 //
-//  Created by Li Zhao on 10/24/18.
+//  Created by Patrick Flanagan on 10/25/18.
 //
 
 import UIKit
@@ -13,7 +13,18 @@ public protocol UNUMColorPickerDelegate: class {
     func cancel()
 }
 
-public class UNUMColorPickerView: UIView {
+public class UNUMColorPickerViewController: UIViewController {
+
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupCollectionView()
+    }
 
     @IBOutlet var colorCollectionView: UICollectionView!
     //collection view data dource
@@ -21,64 +32,63 @@ public class UNUMColorPickerView: UIView {
     private let cellIdentifier = "ColorEditorCollectionViewCell"
 
     //delegate: communicate with outside
-    public var colorPickerDelegaet: UNUMColorPickerDelegate?
+    public var delegate: UNUMColorPickerDelegate?
 
     fileprivate var initColor: UIColor!
     fileprivate var selectedColor: UIColor!
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    public convenience init(colors: [UIColor], initColor: UIColor?) {
+        let bundle = Bundle(for: UNUMColorPickerViewController.self)
+        self.init(nibName: "UNUMColorPickerViewController", bundle: bundle)
+        self.colors = colors
+        self.initColor = initColor ?? colors.first ?? .clear
+
+        selectedColor = self.initColor
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
-    //need to find a way to init view with colors and init color
-    public func setup(colors: [UIColor], initColor: UIColor?) {
-        self.colors = colors
-        // set init color, if nil use the first color from array
-        self.initColor = initColor == nil ? colors.first : initColor
-        selectedColor = self.initColor
-        setupCollectionView()
-    }
-
     private func setupCollectionView() {
-        let bundle = Bundle(for: UNUMColorPickerView.self)
+        let bundle = Bundle(for: UNUMColorPickerViewController.self)
         let nib = UINib(nibName: cellIdentifier, bundle: bundle)
         colorCollectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
 
         colorCollectionView.delegate = self
         colorCollectionView.dataSource = self
     }
-    
-    @IBAction func saveAction(sender: AnyObject) {
-        colorPickerDelegaet?.save()
+
+    @IBAction func saveAction(_ sender: Any) {
+        delegate?.save()
     }
 
-    @IBAction func cancelAction(sender: AnyObject) {
-        colorPickerDelegaet?.cancel()
+    @IBAction func cancelAction(_ sender: Any) {
+        delegate?.cancel()
     }
 }
 
 //MARK: UICollectionViewDataSource
-extension UNUMColorPickerView: UICollectionViewDataSource {
+extension UNUMColorPickerViewController: UICollectionViewDataSource {
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ColorEditorCollectionViewCell
         let color = colors[indexPath.row]
         cell.setupColorButton(colorValue: color, selected: selectedColor == color)
         return cell
     }
-    
+
     open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colors.count
     }
 }
 
 //MARK: UICollectionViewDelegate
-extension UNUMColorPickerView: UICollectionViewDelegate {
+extension UNUMColorPickerViewController: UICollectionViewDelegate {
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        colorPickerDelegaet?.didSet(color: colors[indexPath.row])
+        delegate?.didSet(color: colors[indexPath.row])
         selectedColor = colors[indexPath.row]
         collectionView.reloadData()
     }

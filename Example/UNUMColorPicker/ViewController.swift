@@ -15,41 +15,39 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
         //color data
         let colorData: [UIColor] = [.white, .black, .blue, .green, .yellow, .red, .cyan, .brown]
 
-        //init view
-        let bundle = Bundle(for: UNUMColorPickerView.self)
-        let nib = UINib(nibName: "UNUMColorPickerView", bundle: bundle)
-        let colorPickerView = nib.instantiate(withOwner: self, options: nil).first as! UNUMColorPickerView
+        //init viewController
+        let colorPickerViewController = UNUMColorPickerViewController(colors: colorData, initColor: nil)
+        colorPickerViewController.delegate = self
 
-        containerView.addSubview(colorPickerView)
+        // Add to view.
+        willMove(toParent: colorPickerViewController)
+        containerView.addSubview(colorPickerViewController.view)
+        addChild(colorPickerViewController)
+        didMove(toParent: colorPickerViewController)
 
         //add constraints
-        colorPickerView.translatesAutoresizingMaskIntoConstraints = false
+        colorPickerViewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            colorPickerView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 0),
-            colorPickerView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0),
-            colorPickerView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0),
-            colorPickerView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0)])
-
-        
-        colorPickerView.setup(colors: colorData, initColor: nil)
-
-        colorPickerView.colorPickerDelegaet = self
+            colorPickerViewController.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 0),
+            colorPickerViewController.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0),
+            colorPickerViewController.view.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0),
+            colorPickerViewController.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0)]
+        )
     }
 }
 
 //MARK: UNUMColorPickerDelegate
 extension ViewController: UNUMColorPickerDelegate {
     func save() {
-
+        print("save delegate function called. This typically would be where you would want to dismiss the colorPicker.")
     }
 
     func cancel() {
-        
+        print("cancel delegate function called. This typically would be where you would want to both dismiss the colorPicker as well as reset the the color of whatever you set in `didSet` to its original color.")
     }
 
     func didSet(color: UIColor) {
