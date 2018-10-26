@@ -24,6 +24,7 @@
 		F96FD6732182307600A0672A /* UNUMColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96FD6712182307500A0672A /* UNUMColorPickerViewController.swift */; };
 		F96FD6742182307600A0672A /* UNUMColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */; };
 		F96FD675218233FE00A0672A /* UNUMColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */; };
+		F9F4BB1C21836F1D00AAF4EA /* UNUMColorPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F4BB1B21836F1D00AAF4EA /* UNUMColorPickerViewModel.swift */; };
 		FCD41149923B669C933CF459E99ECD4D /* ColorEditorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17368B2BE58644E58AE772BC982B7A57 /* ColorEditorCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		F34FCFA53F49C97A1D4C900798643366 /* Pods-UNUMColorPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UNUMColorPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F96FD6712182307500A0672A /* UNUMColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UNUMColorPickerViewController.swift; path = UNUMColorPicker/Classes/UNUMColorPickerViewController.swift; sourceTree = "<group>"; };
 		F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UNUMColorPickerViewController.xib; path = UNUMColorPicker/Classes/UNUMColorPickerViewController.xib; sourceTree = "<group>"; };
+		F9F4BB1B21836F1D00AAF4EA /* UNUMColorPickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNUMColorPickerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 		CC47095AF5FBD85D01DD2F03C6A4AF27 /* UNUMColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				F9F4BB1B21836F1D00AAF4EA /* UNUMColorPickerViewModel.swift */,
 				17368B2BE58644E58AE772BC982B7A57 /* ColorEditorCollectionViewCell.swift */,
 				CC16C7E978730D6F725AA5D251E66F85 /* ColorEditorCollectionViewCell.xib */,
 				D2608C795FC0CA2E3F2E59321A18F5A6 /* ReplaceMe.swift */,
@@ -453,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD41149923B669C933CF459E99ECD4D /* ColorEditorCollectionViewCell.swift in Sources */,
+				F9F4BB1C21836F1D00AAF4EA /* UNUMColorPickerViewModel.swift in Sources */,
 				3E3F16BE091363435398A97CF6726696 /* ColorEditorCollectionViewCell.xib in Sources */,
 				F96FD6732182307600A0672A /* UNUMColorPickerViewController.swift in Sources */,
 				3E68B19718FB36906D1E28706CDCE2E7 /* ReplaceMe.swift in Sources */,

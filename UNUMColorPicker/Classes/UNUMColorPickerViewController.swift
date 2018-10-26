@@ -19,10 +19,8 @@ public class UNUMColorPickerViewController: UIViewController {
 
     public var delegate: UNUMColorPickerDelegate?
 
-    //collection view data dource
-    private var colors: [UIColor]!
+    private var viewModel: UNUMColorPickerViewModel!
     private let cellIdentifier = "ColorEditorCollectionViewCell"
-    private var selectedColor: UIColor!
 
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -31,8 +29,7 @@ public class UNUMColorPickerViewController: UIViewController {
     public convenience init(colors: [UIColor], initiallySelectedColor: UIColor? = nil) {
         let bundle = Bundle(for: UNUMColorPickerViewController.self)
         self.init(nibName: "UNUMColorPickerViewController", bundle: bundle)
-        self.colors = colors
-        selectedColor = initiallySelectedColor ?? colors.first ?? .clear
+        self.viewModel = UNUMColorPickerViewModel(colors: colors, selectedColor: initiallySelectedColor)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -66,21 +63,21 @@ public class UNUMColorPickerViewController: UIViewController {
 extension UNUMColorPickerViewController: UICollectionViewDataSource {
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ColorEditorCollectionViewCell
-        let color = colors[indexPath.row]
-        cell.setupColorButton(colorValue: color, selected: selectedColor == color)
+        let color = viewModel.colors[indexPath.row]
+        cell.setupColorButton(colorValue: color, selected: viewModel.selectedColor == color)
         return cell
     }
 
     open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        return viewModel.colors.count
     }
 }
 
 //MARK: UICollectionViewDelegate
 extension UNUMColorPickerViewController: UICollectionViewDelegate {
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSet(color: colors[indexPath.row])
-        selectedColor = colors[indexPath.row]
+        delegate?.didSet(color: viewModel.colors[indexPath.row])
+        viewModel.selectedColor = viewModel.colors[indexPath.row]
         collectionView.reloadData()
     }
 }
