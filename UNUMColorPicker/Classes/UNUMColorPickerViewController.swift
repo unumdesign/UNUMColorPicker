@@ -34,19 +34,16 @@ public class UNUMColorPickerViewController: UIViewController {
     //delegate: communicate with outside
     public var delegate: UNUMColorPickerDelegate?
 
-    fileprivate var initColor: UIColor!
     fileprivate var selectedColor: UIColor!
 
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    public convenience init(colors: [UIColor], initColor: UIColor?) {
+    public convenience init(colors: [UIColor], initiallySelectedColor: UIColor? = nil) {
         let bundle = Bundle(for: UNUMColorPickerViewController.self)
         self.init(nibName: "UNUMColorPickerViewController", bundle: bundle)
         self.colors = colors
-        self.initColor = initColor ?? colors.first ?? .clear
-
-        selectedColor = self.initColor
+        selectedColor = initiallySelectedColor ?? colors.first ?? .clear
     }
 
     required init?(coder aDecoder: NSCoder) {
