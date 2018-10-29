@@ -9,8 +9,8 @@ import UIKit
 
 public protocol UNUMColorPickerDelegate: class {
     func didSet(color: UIColor)
-    func save()
-    func cancel()
+    func save(_ colorPickerViewController: UNUMColorPickerViewController)
+    func cancel(_ colorPickerViewController: UNUMColorPickerViewController, initialColor: UIColor)
 }
 
 public class UNUMColorPickerViewController: UIViewController {
@@ -36,10 +36,10 @@ public class UNUMColorPickerViewController: UIViewController {
     /// - Parameters:
     ///   - colors: The colors the user will be able to select.
     ///   - initiallySelectedColor: optional parameter letting a particular color be chosen. Default is to use the first color of colorData or clear if there are no colors in the array.
-    public convenience init(colors: [UIColor], initiallySelectedColor: UIColor? = nil) {
+    public convenience init(colors: [UIColor], initialColor: UIColor) {
         let bundle = Bundle(for: UNUMColorPickerViewController.self)
         self.init(nibName: "UNUMColorPickerViewController", bundle: bundle)
-        self.viewModel = UNUMColorPickerViewModel(colors: colors, selectedColor: initiallySelectedColor)
+        self.viewModel = UNUMColorPickerViewModel(colors: colors, initialColor: initialColor)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -61,11 +61,11 @@ public class UNUMColorPickerViewController: UIViewController {
     }
 
     @IBAction func saveAction(_ sender: Any) {
-        delegate?.save()
+        delegate?.save(self)
     }
 
     @IBAction func cancelAction(_ sender: Any) {
-        delegate?.cancel()
+        delegate?.cancel(self, initialColor: viewModel.initialColor)
     }
 }
 

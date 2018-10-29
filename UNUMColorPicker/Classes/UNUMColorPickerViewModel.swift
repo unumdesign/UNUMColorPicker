@@ -11,10 +11,12 @@ import Foundation
 class UNUMColorPickerViewModel {
 
     let colors: [UIColor]
+    let initialColor: UIColor
     var selectedColor: UIColor
 
-    init(colors: [UIColor], selectedColor: UIColor? = nil) {
+    init(colors: [UIColor], initialColor: UIColor) {
         self.colors = colors
-        self.selectedColor = selectedColor ?? colors.first ?? .clear
+        self.initialColor = initialColor
+        self.selectedColor = initialColor
     }
 }
