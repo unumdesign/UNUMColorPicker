@@ -93,7 +93,7 @@
 		F34FCFA53F49C97A1D4C900798643366 /* Pods-UNUMColorPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UNUMColorPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F96FD6712182307500A0672A /* UNUMColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UNUMColorPickerViewController.swift; path = UNUMColorPicker/Classes/UNUMColorPickerViewController.swift; sourceTree = "<group>"; };
 		F96FD6722182307500A0672A /* UNUMColorPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UNUMColorPickerViewController.xib; path = UNUMColorPicker/Classes/UNUMColorPickerViewController.xib; sourceTree = "<group>"; };
-		F9F4BB1B21836F1D00AAF4EA /* UNUMColorPickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNUMColorPickerViewModel.swift; sourceTree = "<group>"; };
+		F9F4BB1B21836F1D00AAF4EA /* UNUMColorPickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UNUMColorPickerViewModel.swift; path = UNUMColorPicker/Classes/UNUMColorPickerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
