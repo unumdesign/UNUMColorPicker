@@ -11,7 +11,7 @@ import Foundation
 class UNUMColorPickerViewModel {
 
     let colors: [UIColor]
-    let initialColor: UIColor
+    var initialColor: UIColor
     var selectedColor: UIColor
 
     init(colors: [UIColor], initialColor: UIColor) {
