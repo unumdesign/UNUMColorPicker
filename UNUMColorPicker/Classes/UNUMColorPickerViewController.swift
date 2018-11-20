@@ -99,7 +99,7 @@ extension UNUMColorPickerViewController: UICollectionViewDelegate {
     }
 }
 
-//MARK: UICol
+//MARK: UICollectionViewDelegateFlowLayout
 extension UNUMColorPickerViewController: UICollectionViewDelegateFlowLayout {
      open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 25, height: 25)
