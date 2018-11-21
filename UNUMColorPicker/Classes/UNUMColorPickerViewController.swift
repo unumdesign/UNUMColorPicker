@@ -42,6 +42,11 @@ public class UNUMColorPickerViewController: UIViewController {
         self.viewModel = UNUMColorPickerViewModel(colors: colors, initialColor: initialColor)
     }
 
+    public func reset(initialColor color: UIColor) {
+        self.viewModel.initialColor = color
+        colorCollectionView.reloadData()
+    }
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -91,5 +96,20 @@ extension UNUMColorPickerViewController: UICollectionViewDelegate {
         delegate?.didSet(color: viewModel.colors[indexPath.row])
         viewModel.selectedColor = viewModel.colors[indexPath.row]
         collectionView.reloadData()
+    }
+}
+
+//MARK: UICollectionViewDelegateFlowLayout
+extension UNUMColorPickerViewController: UICollectionViewDelegateFlowLayout {
+     open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 25, height: 25)
+    }
+
+    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 10)
     }
 }
