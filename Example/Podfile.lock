@@ -1,5 +1,5 @@
 PODS:
-  - UNUMColorPicker (1.0.1)
+  - UNUMColorPicker (1.0.2)
 
 DEPENDENCIES:
   - UNUMColorPicker (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  UNUMColorPicker: 8dea628fa0d337d3c46e6eebedcc23f12eeb7199
+  UNUMColorPicker: ce237e95ceb29efeb3a9e462e468c5b288e4f8f3
 
-PODFILE CHECKSUM: ce21b616458089270f737b79c56f1f12dc4197c5
+PODFILE CHECKSUM: b91a5bcb60dc34caf8b8a315bc094f034ed944ab
 
 COCOAPODS: 1.5.3

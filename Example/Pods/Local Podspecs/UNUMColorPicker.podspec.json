@@ -13,10 +13,11 @@
     "zhaoli1211": "zhaoli841211@gmail.com"
   },
   "source": {
-    "git": "https://github.com/unumdesign/UNUMColorPickerSpecs.git"
+    "git": "https://github.com/unumdesign/UNUMColorPicker.git",
+    "tag": "1.0.2"
   },
   "platforms": {
-    "ios": "9.3"
+    "ios": "9.0"
   },
   "source_files": "UNUMColorPicker/Classes/**/*",
   "resource_bundles": {
