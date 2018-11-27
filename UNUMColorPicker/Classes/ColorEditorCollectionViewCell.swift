@@ -22,20 +22,21 @@ class ColorEditorCollectionViewCell: UICollectionViewCell {
     func setupColorButton(colorValue: UIColor, selected: Bool) {
         self.layoutIfNeeded()
 
-        let borderColor = colorValue == .white ? .lightGray : colorValue
+        let isWhiteColor = colorValue == .white
 
-        borderView.backgroundColor = colorValue
-        borderView.layer.borderWidth = 1
+        borderView.layer.borderWidth = 0.5
         borderView.layer.cornerRadius = borderView.bounds.width / 2
-        borderView.layer.borderColor = borderColor.cgColor
+        borderView.layer.borderColor = isWhiteColor ? UIColor.lightGray.cgColor : colorValue.cgColor
         fillView.layer.borderColor = colorValue.cgColor
-        fillView.layer.borderWidth = 1
+        fillView.backgroundColor = colorValue
+        fillView.layer.borderWidth = isWhiteColor ? 2 : 1
         fillView.layer.cornerRadius = fillView.bounds.width / 2
         if selected {
-            fillView.backgroundColor = colorValue
+            borderView.layer.borderWidth = isWhiteColor ? 0.5 : 2
+            fillView.layer.borderColor = isWhiteColor ? UIColor.lightGray.cgColor : colorValue.cgColor
+            borderView.backgroundColor = .white
         } else {
-            fillView.backgroundColor = .white
+            borderView.backgroundColor = colorValue
         }
     }
-
 }

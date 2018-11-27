@@ -17,6 +17,10 @@ public class UNUMColorPickerViewController: UIViewController {
 
     @IBOutlet var colorCollectionView: UICollectionView!
 
+    @IBOutlet public var saveButton: UIButton!
+    @IBOutlet public var cancelButton: UIButton!
+    @IBOutlet public var titleLabel: UILabel!
+
     public var delegate: UNUMColorPickerDelegate?
 
     private var viewModel: UNUMColorPickerViewModel!
@@ -42,6 +46,11 @@ public class UNUMColorPickerViewController: UIViewController {
         self.viewModel = UNUMColorPickerViewModel(colors: colors, initialColor: initialColor)
     }
 
+    fileprivate func setupButtons() {
+        saveButton.layer.cornerRadius = 10
+        cancelButton.layer.cornerRadius = 10
+    }
+
     public func reset(initialColor color: UIColor) {
         self.viewModel.initialColor = color
         colorCollectionView.reloadData()
@@ -49,6 +58,11 @@ public class UNUMColorPickerViewController: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        setupButtons()
     }
 
     public override func viewDidAppear(_ animated: Bool) {
@@ -102,14 +116,14 @@ extension UNUMColorPickerViewController: UICollectionViewDelegate {
 //MARK: UICollectionViewDelegateFlowLayout
 extension UNUMColorPickerViewController: UICollectionViewDelegateFlowLayout {
      open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 25, height: 25)
+        return CGSize(width: 36, height: 36)
     }
 
     open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 20
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 10)
+        return UIEdgeInsets(top: 2, left: 24, bottom: 2, right: 24)
     }
 }
