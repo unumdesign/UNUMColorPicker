@@ -22,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wok-De-EVt">
-                                <rect key="frame" x="16" y="521" width="343" height="146"/>
+                                <rect key="frame" x="16" y="467" width="343" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="146" id="cdi-vc-cKB"/>
+                                    <constraint firstAttribute="height" constant="200" id="cdi-vc-cKB"/>
                                 </constraints>
                             </view>
                         </subviews>

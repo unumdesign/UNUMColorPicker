@@ -46,6 +46,11 @@ public class UNUMColorPickerViewController: UIViewController {
         self.viewModel = UNUMColorPickerViewModel(colors: colors, initialColor: initialColor)
     }
 
+    fileprivate func setupButtons() {
+        saveButton.layer.cornerRadius = 10
+        cancelButton.layer.cornerRadius = 10
+    }
+
     public func reset(initialColor color: UIColor) {
         self.viewModel.initialColor = color
         colorCollectionView.reloadData()
@@ -53,6 +58,11 @@ public class UNUMColorPickerViewController: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        setupButtons()
     }
 
     public override func viewDidAppear(_ animated: Bool) {
