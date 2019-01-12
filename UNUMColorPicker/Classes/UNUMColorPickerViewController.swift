@@ -53,6 +53,7 @@ public class UNUMColorPickerViewController: UIViewController {
 
     public func reset(initialColor color: UIColor) {
         self.viewModel.initialColor = color
+        self.viewModel.selectedColor = color
         colorCollectionView.reloadData()
     }
 
