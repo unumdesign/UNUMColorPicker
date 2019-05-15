@@ -24,19 +24,14 @@ class ColorEditorCollectionViewCell: UICollectionViewCell {
 
         let isWhiteColor = colorValue == .white
 
-        borderView.layer.borderWidth = 0.5
+        borderView.layer.borderWidth = isWhiteColor ? 0.5 : 3
         borderView.layer.cornerRadius = borderView.bounds.width / 2
         borderView.layer.borderColor = isWhiteColor ? UIColor.lightGray.cgColor : colorValue.cgColor
-        fillView.layer.borderColor = colorValue.cgColor
-        fillView.backgroundColor = colorValue
-        fillView.layer.borderWidth = isWhiteColor ? 2 : 1
+        borderView.backgroundColor = selected ? colorValue : .white
+
+        fillView.isHidden = !isWhiteColor
+        fillView.layer.borderWidth = selected ? 0 : 0.5
+        fillView.layer.borderColor = UIColor.lightGray.cgColor
         fillView.layer.cornerRadius = fillView.bounds.width / 2
-        if selected {
-            borderView.layer.borderWidth = isWhiteColor ? 0.5 : 2
-            fillView.layer.borderColor = isWhiteColor ? UIColor.lightGray.cgColor : colorValue.cgColor
-            borderView.backgroundColor = .white
-        } else {
-            borderView.backgroundColor = colorValue
-        }
     }
 }
