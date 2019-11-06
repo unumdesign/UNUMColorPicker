@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UNUMColorPicker'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'UNUM color picker library.'
   s.swift_version    = '4.2'
 
@@ -41,4 +41,5 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'unum-ios-ui', '1.0.0'
 end
