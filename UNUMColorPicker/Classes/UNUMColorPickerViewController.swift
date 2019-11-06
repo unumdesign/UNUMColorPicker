@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import unum_ios_ui
 
 public protocol UNUMColorPickerDelegate: class {
     func didSet(color: UIColor)
@@ -13,7 +14,7 @@ public protocol UNUMColorPickerDelegate: class {
     func cancel(_ colorPickerViewController: UNUMColorPickerViewController, initialColor: UIColor)
 }
 
-public class UNUMColorPickerViewController: UIViewController {
+public class UNUMColorPickerViewController: UIViewController, DynamicColorable {
 
     @IBOutlet var colorCollectionView: UICollectionView!
 
@@ -64,6 +65,8 @@ public class UNUMColorPickerViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupButtons()
+        setupNotifications()
+        setColors(scheme: .current)
     }
 
     public override func viewDidAppear(_ animated: Bool) {
@@ -87,6 +90,37 @@ public class UNUMColorPickerViewController: UIViewController {
     @IBAction func cancelAction(_ sender: Any) {
         delegate?.cancel(self, initialColor: viewModel.initialColor)
     }
+
+        private func setupNotifications() {
+            NotificationCenter.default.addObserver(self, selector: #selector(handleDidChangeCurrentScheme), name: .didChangeCurrentScheme, object: nil)
+        }
+
+        @objc private func handleDidChangeCurrentScheme() {
+            setColors(scheme: .current)
+        }
+
+        override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+            setColors(scheme: .current)
+        }
+
+        func setColors(scheme: UNUMScheme) {
+            switch scheme{
+            case .light:
+                self.view.backgroundColor = UNUMColor.Container.strongInverted(scheme: scheme)
+                self.titleLabel.textColor = UNUMColor.Content.primary(scheme: scheme)
+                self.cancelButton.backgroundColor = UNUMColor.Container.strongInverted(scheme: scheme)
+                self.cancelButton.setTitleColor(UNUMColor.Content.primary(scheme: scheme), for: .normal)
+                self.saveButton.backgroundColor = UNUMColor.Container.strongInverted(scheme: scheme)
+                self.saveButton.setTitleColor(UNUMColor.Content.primary(scheme: scheme), for: .normal)
+            case .dark:
+                self.view.backgroundColor = UIColor(hex: "#333333") 
+                self.titleLabel.textColor = UNUMColor.Content.primary(scheme: scheme)
+                self.cancelButton.backgroundColor = UIColor(hex: "#333333")
+                self.cancelButton.setTitleColor(UNUMColor.Content.primary(scheme: scheme), for: .normal)
+                self.saveButton.backgroundColor = UNUMColor.Container.strongInverted(scheme: scheme)
+                self.saveButton.setTitleColor(UNUMColor.Content.primary(scheme: scheme), for: .normal)
+            }
+        }
 }
 
 //MARK: UICollectionViewDataSource
