@@ -2,7 +2,7 @@
   "name": "UNUMColorPicker",
   "version": "1.0.3",
   "summary": "UNUM color picker library.",
-  "swift_version": "4.2",
+  "swift_versions": "4.2",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/unumdesign/UNUMColorPicker",
   "license": {
@@ -25,5 +25,6 @@
       "UNUMColorPicker/Classes/**/*.{xib}"
     ]
   },
-  "frameworks": "UIKit"
+  "frameworks": "UIKit",
+  "swift_version": "4.2"
 }
