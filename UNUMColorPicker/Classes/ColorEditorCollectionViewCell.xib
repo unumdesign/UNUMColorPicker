@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,20 +22,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfM-fl-RTk">
-                        <rect key="frame" x="5" y="5" width="91" height="83"/>
+                        <rect key="frame" x="3" y="3" width="95" height="87"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="cfM-fl-RTk" secondAttribute="bottom" constant="5" id="2KO-l2-pxy"/>
+                <constraint firstAttribute="bottom" secondItem="cfM-fl-RTk" secondAttribute="bottom" constant="3" id="2KO-l2-pxy"/>
                 <constraint firstAttribute="bottom" secondItem="do8-xZ-6e2" secondAttribute="bottom" id="ERM-vf-7nq"/>
                 <constraint firstItem="do8-xZ-6e2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FBH-jJ-La9"/>
                 <constraint firstAttribute="trailing" secondItem="do8-xZ-6e2" secondAttribute="trailing" id="IQV-pE-JHp"/>
-                <constraint firstItem="cfM-fl-RTk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Wro-jS-7At"/>
+                <constraint firstItem="cfM-fl-RTk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="Wro-jS-7At"/>
                 <constraint firstItem="do8-xZ-6e2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fgF-zM-eyB"/>
-                <constraint firstAttribute="trailing" secondItem="cfM-fl-RTk" secondAttribute="trailing" constant="5" id="gGM-GT-dQs"/>
-                <constraint firstItem="cfM-fl-RTk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="uK2-Xk-Vgv"/>
+                <constraint firstAttribute="trailing" secondItem="cfM-fl-RTk" secondAttribute="trailing" constant="3" id="gGM-GT-dQs"/>
+                <constraint firstItem="cfM-fl-RTk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="uK2-Xk-Vgv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="101" height="93"/>
