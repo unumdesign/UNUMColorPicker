@@ -6,6 +6,18 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0443D2795D5B2FC9948DFF4D8E248F2F /* Pods-UNUMColorPicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80CA894E74C1ADE56A033A45BF7FA191 /* Pods-UNUMColorPicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07890D448CBB087BB15FA1461DB11510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
@@ -14,15 +26,15 @@
 		15FA506FA1DB0CB503CD6C758404EBFA /* ColorEditorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDCD50D5D96DBDD797A3046D43ECE434 /* ColorEditorCollectionViewCell.xib */; };
 		1AEFDD6FE6A1E9890F8C18794EA6CFCC /* UNUMColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B70CA3FD9213C7EFE427CCE7A3BB23 /* UNUMColorPickerViewController.swift */; };
 		3EC9472D0F7222915AAE8206EDB19E3C /* UNUMColorPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73444E08880282179F20FCAA8D230970 /* UNUMColorPicker.bundle */; };
-		4A6AF6456A13BA9B745F1F3A9900CF7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		5170B05288E477F86AD250E072A761B5 /* Pods-UNUMColorPicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06878A2F70DA41CA938CA16ED3228E1D /* Pods-UNUMColorPicker_Tests-dummy.m */; };
 		54D96174A0E1EE00BDFCE7F34EBD259E /* UNUMColorPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC01680FFDDDCAD18A8375E3C31CBC98 /* UNUMColorPickerViewModel.swift */; };
 		5CBA444DB78344B736ACCC88BE7B52AF /* ColorEditorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EFE1BF60543AD3BC2EF6FC82946831 /* ColorEditorCollectionViewCell.swift */; };
 		609410C38541718315928408757A2065 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		6095F7B9390A57B134818A8F14881632 /* ColorEditorCollectionViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = DDCD50D5D96DBDD797A3046D43ECE434 /* ColorEditorCollectionViewCell.xib */; };
-		650779924BEF4136686DAF0764EF475D /* Pods-UNUMColorPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7CA74991EFDF765F516A228DFAF125D /* Pods-UNUMColorPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BACA7C7E955DBDD1C0E680DF3CF277E /* UNUMColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31257E6F3E944B7693704D0C14EE797B /* UNUMColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8EBB96D2645D0AA89E27AB9ACCE9E01 /* Pods-UNUMColorPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 280E2E12C89D225F84FCD12DC79B301D /* Pods-UNUMColorPicker_Example-dummy.m */; };
+		AFABD26A1E5C239CF12D9973DD3CA29E /* Pods-UNUMColorPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 280E2E12C89D225F84FCD12DC79B301D /* Pods-UNUMColorPicker_Example-dummy.m */; };
+		B7068D1A2E7AF9AC62D9201D5186E578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		BA446FE02597211BD8A7E0A84A7C90B3 /* Pods-UNUMColorPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7CA74991EFDF765F516A228DFAF125D /* Pods-UNUMColorPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAE38C2F6C009FF9467855C5E3943A6F /* UNUMColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 642B8C53ABED36E2185EF6DA48B92F47 /* UNUMColorPickerViewController.xib */; };
 		F1EF4F8826CEB75D001100D815EF2F40 /* UNUMColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 180BCB4D6D1E5EB082C32BFC0DCDF363 /* UNUMColorPicker-dummy.m */; };
 /* End PBXBuildFile section */
@@ -35,6 +47,13 @@
 			remoteGlobalIDString = E2FE8BDF47F21CC7809571A79092D2BE;
 			remoteInfo = "UNUMColorPicker-UNUMColorPicker";
 		};
+		246CB59C33BDCF52A17C8E7AED06457C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
 		4147AA4C6E2B02BEA300E39066756E66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -42,7 +61,7 @@
 			remoteGlobalIDString = 51710A16F68EC0E3844B6B157C19EFCA;
 			remoteInfo = "Pods-UNUMColorPicker_Example";
 		};
-		89797E77FD043703A4B92A42EAA69323 /* PBXContainerItemProxy */ = {
+		612D455C803562E0A324F3F207742D24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -78,6 +97,7 @@
 		83C23420A561554309B80626578161FB /* Pods-UNUMColorPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UNUMColorPicker_Tests.modulemap"; sourceTree = "<group>"; };
 		86243F52B5EEEADBA06E8F75F98B89FA /* UNUMColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UNUMColorPicker-Info.plist"; sourceTree = "<group>"; };
 		8880A09D628BF9E5201B67B5AAF6C924 /* UNUMColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UNUMColorPicker-prefix.pch"; sourceTree = "<group>"; };
+		89F85ACF3D78B39506B75103B4694B36 /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
 		8BF545A2ECEBFC87FAAAC76B0C6F4B72 /* ResourceBundle-UNUMColorPicker-UNUMColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-UNUMColorPicker-UNUMColorPicker-Info.plist"; sourceTree = "<group>"; };
 		985A2817B4D31EFD8A10B0ABAB7AF530 /* Pods-UNUMColorPicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UNUMColorPicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -111,19 +131,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2161CDB1F4078D13BAA0861CDB711E50 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4A6AF6456A13BA9B745F1F3A9900CF7B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		271C1B5809A93D22F7292C59EA39325D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				07890D448CBB087BB15FA1461DB11510 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60C990229887FAA0AB1992162121565 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7068D1A2E7AF9AC62D9201D5186E578 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +224,23 @@
 			path = "Target Support Files/Pods-UNUMColorPicker_Tests";
 			sourceTree = "<group>";
 		};
+		965877409E01FB3D85D85E90E6B30185 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AED61B9A1CFA211C061344F741DBA07 /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9AED61B9A1CFA211C061344F741DBA07 /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				EEA599FE5C15138FF0981CCFB01E55AA /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
 		9DB2FE582F556ECA533BB78920480448 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +267,7 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				FFE6682DB97B60AFB8E9B6E8EF098958 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				965877409E01FB3D85D85E90E6B30185 /* Pods */,
 				AE848767411B59F85302432B6232356C /* Products */,
 				9DB2FE582F556ECA533BB78920480448 /* Targets Support Files */,
 			);
@@ -260,6 +298,15 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		EEA599FE5C15138FF0981CCFB01E55AA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				89F85ACF3D78B39506B75103B4694B36 /* SwiftLint.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
 		FFE6682DB97B60AFB8E9B6E8EF098958 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,11 +326,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F86EBCA742D2F319B9B4CDECCDC7467C /* Headers */ = {
+		91AB8491C0F540BBA33B187D9AFBBCA4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				650779924BEF4136686DAF0764EF475D /* Pods-UNUMColorPicker_Example-umbrella.h in Headers */,
+				BA446FE02597211BD8A7E0A84A7C90B3 /* Pods-UNUMColorPicker_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,17 +366,18 @@
 		};
 		51710A16F68EC0E3844B6B157C19EFCA /* Pods-UNUMColorPicker_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57BB913C53D89C1ED52F2DCB839CE6B2 /* Build configuration list for PBXNativeTarget "Pods-UNUMColorPicker_Example" */;
+			buildConfigurationList = 1F61D1D18B1782B4DC974F8AFDBCA953 /* Build configuration list for PBXNativeTarget "Pods-UNUMColorPicker_Example" */;
 			buildPhases = (
-				F86EBCA742D2F319B9B4CDECCDC7467C /* Headers */,
-				08A012EE1B25B732FD565A1BB314E81D /* Sources */,
-				2161CDB1F4078D13BAA0861CDB711E50 /* Frameworks */,
-				D1B21D68879CB9D3932BC66D1F222B0D /* Resources */,
+				91AB8491C0F540BBA33B187D9AFBBCA4 /* Headers */,
+				150D2B10CE441830017B84E414FC26FA /* Sources */,
+				F60C990229887FAA0AB1992162121565 /* Frameworks */,
+				9FCBA9E2E6475A67B74930A066A9094E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F8540057B7F882A0A5ECF19EF2D83C29 /* PBXTargetDependency */,
+				9820131176B21CBB16ADD9FD5E504392 /* PBXTargetDependency */,
+				AB937B7083FBB40A1C20B23D89FDDBFA /* PBXTargetDependency */,
 			);
 			name = "Pods-UNUMColorPicker_Example";
 			productName = "Pods-UNUMColorPicker_Example";
@@ -395,6 +443,7 @@
 			targets = (
 				51710A16F68EC0E3844B6B157C19EFCA /* Pods-UNUMColorPicker_Example */,
 				E5EC0B97061133321ABF26A33C019DF7 /* Pods-UNUMColorPicker_Tests */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 				4068AF968AEE53AB17701950C8C9ADD5 /* UNUMColorPicker */,
 				E2FE8BDF47F21CC7809571A79092D2BE /* UNUMColorPicker-UNUMColorPicker */,
 			);
@@ -419,7 +468,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1B21D68879CB9D3932BC66D1F222B0D /* Resources */ = {
+		9FCBA9E2E6475A67B74930A066A9094E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -436,11 +485,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		08A012EE1B25B732FD565A1BB314E81D /* Sources */ = {
+		150D2B10CE441830017B84E414FC26FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8EBB96D2645D0AA89E27AB9ACCE9E01 /* Pods-UNUMColorPicker_Example-dummy.m in Sources */,
+				AFABD26A1E5C239CF12D9973DD3CA29E /* Pods-UNUMColorPicker_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,21 +530,61 @@
 			target = 51710A16F68EC0E3844B6B157C19EFCA /* Pods-UNUMColorPicker_Example */;
 			targetProxy = 4147AA4C6E2B02BEA300E39066756E66 /* PBXContainerItemProxy */;
 		};
+		9820131176B21CBB16ADD9FD5E504392 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 246CB59C33BDCF52A17C8E7AED06457C /* PBXContainerItemProxy */;
+		};
+		AB937B7083FBB40A1C20B23D89FDDBFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UNUMColorPicker;
+			target = 4068AF968AEE53AB17701950C8C9ADD5 /* UNUMColorPicker */;
+			targetProxy = 612D455C803562E0A324F3F207742D24 /* PBXContainerItemProxy */;
+		};
 		E61268105C3D8E41B8400F5DC0914CD5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "UNUMColorPicker-UNUMColorPicker";
 			target = E2FE8BDF47F21CC7809571A79092D2BE /* UNUMColorPicker-UNUMColorPicker */;
 			targetProxy = 098C50C0EC4961C09CEAEF012ACD268A /* PBXContainerItemProxy */;
 		};
-		F8540057B7F882A0A5ECF19EF2D83C29 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UNUMColorPicker;
-			target = 4068AF968AEE53AB17701950C8C9ADD5 /* UNUMColorPicker */;
-			targetProxy = 89797E77FD043703A4B92A42EAA69323 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0DACD1F3DAD99FC7E1FF58D851A31801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE5B9C846BEE369E6133FB5BE1BE6BBD /* Pods-UNUMColorPicker_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UNUMColorPicker_Example/Pods-UNUMColorPicker_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UNUMColorPicker_Example/Pods-UNUMColorPicker_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		0EF1612F22735684A8926D5CF2B5DE97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0118F22F678EC20B5625503B39BDE49A /* UNUMColorPicker.xcconfig */;
@@ -610,9 +699,9 @@
 			};
 			name = Release;
 		};
-		2A17319C15CD2FB25E5C836206AFBFF7 /* Release */ = {
+		63E3FB9D027F8418CC24CC658A4BA4E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE5B9C846BEE369E6133FB5BE1BE6BBD /* Pods-UNUMColorPicker_Example.release.xcconfig */;
+			baseConfigurationReference = 1B6152010CD0909F38AADA0E1C2356DC /* Pods-UNUMColorPicker_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -638,11 +727,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		75F7AE2BB4F7443D4B03CC832FFA72CC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -676,6 +764,20 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		84D7C4574E8F0F3095623F0E06F5B402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89F85ACF3D78B39506B75103B4694B36 /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -818,42 +920,31 @@
 			};
 			name = Debug;
 		};
-		DA47BA650109261BA4084797C36CF2CE /* Debug */ = {
+		DEED47E09AF743F48544C1C4FEADEF47 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B6152010CD0909F38AADA0E1C2356DC /* Pods-UNUMColorPicker_Example.debug.xcconfig */;
+			baseConfigurationReference = 89F85ACF3D78B39506B75103B4694B36 /* SwiftLint.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-UNUMColorPicker_Example/Pods-UNUMColorPicker_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-UNUMColorPicker_Example/Pods-UNUMColorPicker_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1F61D1D18B1782B4DC974F8AFDBCA953 /* Build configuration list for PBXNativeTarget "Pods-UNUMColorPicker_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63E3FB9D027F8418CC24CC658A4BA4E8 /* Debug */,
+				0DACD1F3DAD99FC7E1FF58D851A31801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21DB690DC26E5C221874ED83B73F5FA1 /* Build configuration list for PBXNativeTarget "UNUMColorPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -881,11 +972,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57BB913C53D89C1ED52F2DCB839CE6B2 /* Build configuration list for PBXNativeTarget "Pods-UNUMColorPicker_Example" */ = {
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA47BA650109261BA4084797C36CF2CE /* Debug */,
-				2A17319C15CD2FB25E5C836206AFBFF7 /* Release */,
+				DEED47E09AF743F48544C1C4FEADEF47 /* Debug */,
+				84D7C4574E8F0F3095623F0E06F5B402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

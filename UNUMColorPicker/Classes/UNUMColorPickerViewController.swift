@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol UNUMColorPickerDelegate: class {
+public protocol UNUMColorPickerDelegate: AnyObject {
     func didSet(color: UIColor)
     func save(_ colorPickerViewController: UNUMColorPickerViewController)
     func cancel(_ colorPickerViewController: UNUMColorPickerViewController, initialColor: UIColor)
@@ -89,13 +89,15 @@ public class UNUMColorPickerViewController: UIViewController {
     }
 }
 
-//MARK: UICollectionViewDataSource
+// MARK: UICollectionViewDataSource
 extension UNUMColorPickerViewController: UICollectionViewDataSource {
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ColorEditorCollectionViewCell
-        let color = viewModel.colors[indexPath.row]
-        cell.setupColorButton(colorValue: color, selected: viewModel.selectedColor == color)
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? ColorEditorCollectionViewCell {
+            let color = viewModel.colors[indexPath.row]
+            cell.setupColorButton(colorValue: color, selected: viewModel.selectedColor == color)
+            return cell
+        }
+        return UICollectionViewCell()
     }
 
     open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -103,7 +105,7 @@ extension UNUMColorPickerViewController: UICollectionViewDataSource {
     }
 }
 
-//MARK: UICollectionViewDelegate
+// MARK: UICollectionViewDelegate
 extension UNUMColorPickerViewController: UICollectionViewDelegate {
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
@@ -114,7 +116,7 @@ extension UNUMColorPickerViewController: UICollectionViewDelegate {
     }
 }
 
-//MARK: UICollectionViewDelegateFlowLayout
+// MARK: UICollectionViewDelegateFlowLayout
 extension UNUMColorPickerViewController: UICollectionViewDelegateFlowLayout {
      open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 36, height: 36)

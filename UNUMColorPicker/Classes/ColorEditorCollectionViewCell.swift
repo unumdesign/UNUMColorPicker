@@ -13,7 +13,6 @@ class ColorEditorCollectionViewCell: UICollectionViewCell {
     @IBOutlet var borderView: UIView!
     @IBOutlet var fillView: UIView!
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,12 +26,9 @@ class ColorEditorCollectionViewCell: UICollectionViewCell {
         borderView.layer.borderWidth = 0.5
         borderView.layer.borderColor = UIColor(white: 0.8, alpha: 1.0).cgColor
 
-
-
         fillView.backgroundColor = .clear
         fillView.layer.cornerRadius = fillView.bounds.width / 2
         fillView.layer.borderColor = UIColor(white: 0.975, alpha: 1.0).cgColor
-
 
         fillView.layer.borderWidth = selected ? 3 : 0
     }
