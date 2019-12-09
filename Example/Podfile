@@ -4,6 +4,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'UNUMColorPicker_Example' do
   pod 'UNUMColorPicker', :path => '../'
+  pod 'SwiftLint' 
 
   target 'UNUMColorPicker_Tests' do
     inherit! :search_paths
