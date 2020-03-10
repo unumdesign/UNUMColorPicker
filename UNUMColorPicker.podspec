@@ -8,15 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UNUMColorPicker'
-  s.version          = '1.1.1'
+  s.version          = '1.2.0'
   s.summary          = 'UNUM color picker library.'
-  s.swift_version    = '4.2'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.swift_version    = '5.0'
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -27,18 +21,14 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhaoli1211' => 'zhaoli841211@gmail.com' }
   s.source           = { :git => 'https://github.com/unumdesign/UNUMColorPicker.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'UNUMColorPicker/Classes/**/*'
   
-   s.resource_bundles = {
-       'UNUMColorPicker' => ['UNUMColorPicker/Classes/**/*.{xib}']
-   }
-   s.frameworks = 'UIKit'
+  s.resource_bundles = {
+    'UNUMColorPicker' => ['UNUMColorPicker/Classes/**/*.{xib}']
+  }
+  s.frameworks = 'UIKit'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
