@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UNUMColorPicker'
-  s.version          = '1.1.1'
+  s.version          = '1.2.0'
   s.summary          = 'UNUM color picker library.'
   s.swift_version    = '5.0'
 
